@@ -82,7 +82,7 @@ export default function Home() {
 
       {/* ปุ่มกด Save: กดแล้วเรียกฟังก์ชัน saveAnimal */}
       <TouchableOpacity onPress={saveAnimal} style={myStyles.button}>
-        <Text style={{ color: 'white' }}>Saveeeee</Text>
+        <Text style={{ color: 'white' }}>Saveeeeee</Text>
       </TouchableOpacity>
 
       {/* ปุ่มกด Remove: กดแล้วเรียกฟังก์ชัน removeAnimal */}
