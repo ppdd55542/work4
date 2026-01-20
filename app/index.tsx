@@ -18,7 +18,7 @@ export default function Home() {
 
   // --- ฟังก์ชัน 1: บันทึกข้อมูล (Save) ---
   async function saveAnimal() {
-    try {
+    
       // 1. สั่งบันทึกลงความจำเครื่อง (Key="animal", Value=ค่าที่พิมพ์)
       // ต้องมี await เพื่อรอให้บันทึกเสร็จก่อน ถึงจะไปบรรทัดถัดไป
       await AsyncStorage.setItem("animal", value);
@@ -28,14 +28,13 @@ export default function Home() {
       
       // 3. เคลียร์ช่องพิมพ์ให้ว่างเปล่า
       setValue(""); 
-    } catch (e) {
-      console.log(e); // ถ้า Error ให้บอกใน Console
-    }
+    
+    
   }
 
   // --- ฟังก์ชัน 2: โหลดข้อมูล (Load) ---
   async function loadAnimal() {
-    try {
+    
       // 1. ไปดึงข้อมูลจาก Key ที่ชื่อ "animal"
       const a = await AsyncStorage.getItem("animal");
       
@@ -45,22 +44,19 @@ export default function Home() {
       } else {
         setAnimalName(a); // ถ้าเจอ ให้เอาค่าที่เจอมาใส่ ค่าที่เจอคือตัวแปร a
       }
-    } catch (e) {
-      console.log(e);
-    }
+    
   }
 
   // --- ฟังก์ชัน 3: ลบข้อมูล (Remove) ---
   async function removeAnimal() {
-    try {
+    
       // 1. สั่งลบข้อมูลใน Key "animal" ทิ้งไปเลย
       await AsyncStorage.removeItem("animal");
       
       // 2. เปลี่ยนข้อความหน้าจอให้รู้ว่าลบแล้ว
       setAnimalName("ยังไม่เซฟ"); 
-    } catch (e) {
-      console.log(e);
-    }
+    
+    
   }
 
   // --- ส่วนแสดงผลหน้าจอ (Render) ---
@@ -82,7 +78,7 @@ export default function Home() {
 
       {/* ปุ่มกด Save: กดแล้วเรียกฟังก์ชัน saveAnimal */}
       <TouchableOpacity onPress={saveAnimal} style={myStyles.button}>
-        <Text style={{ color: 'white' }}>Saveeeeeee</Text>
+        <Text style={{ color: 'white' }}>Saveeeeeeee</Text>
       </TouchableOpacity>
 
       {/* ปุ่มกด Remove: กดแล้วเรียกฟังก์ชัน removeAnimal */}
