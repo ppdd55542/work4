@@ -86,9 +86,9 @@ export default function Home() {
       </TouchableOpacity>
 
       {/* ปุ่มกด Remove: กดแล้วเรียกฟังก์ชัน removeAnimal */}
-      {/* ตรงนี้มีการใช้ Style 2 ตัวผสมกัน (array) เพื่อเปลี่ยนสีปุ่มเป็นแดง */}
+      {/* ตรงนี้มีการใช้ Style 2 ตัวผสมกัน (array) เพื่อเปลี่ยนสีปุ่มเป็นแดง  array การเอาสตาย2ตัวผสมกัน แม่แบบ กับ ตัวแก้*/}
       <TouchableOpacity onPress={removeAnimal} 
-      style={[myStyles.button, { backgroundColor: 'red', marginTop: 10 }]}
+      style={[myStyles.button, { backgroundColor: 'red', marginTop: 10 }]} //เว้นระยะห้างระหว่างปุ่ม แดง ฟ้า
       >
         <Text style={{ color: 'white' }}>Remove</Text>
       </TouchableOpacity>
