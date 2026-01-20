@@ -78,7 +78,7 @@ export default function Home() {
 
       {/* ปุ่มกด Save: กดแล้วเรียกฟังก์ชัน saveAnimal */}
       <TouchableOpacity onPress={saveAnimal} style={myStyles.button}>
-        <Text style={{ color: 'white' }}>Saveeeeeeee</Text>
+        <Text style={{ color: 'white' }}>Save</Text>
       </TouchableOpacity>
 
       {/* ปุ่มกด Remove: กดแล้วเรียกฟังก์ชัน removeAnimal */}
@@ -86,7 +86,7 @@ export default function Home() {
       <TouchableOpacity onPress={removeAnimal} 
       style={[myStyles.button, { backgroundColor: 'red', marginTop: 10 }]} //เว้นระยะห้างระหว่างปุ่ม แดง ฟ้า
       >
-        <Text style={{ color: 'white' }}>Remove</Text>
+        <Text style={{ color: 'white' }}>Removee</Text>
       </TouchableOpacity>
     </View>
   );
