@@ -39,11 +39,11 @@ export default function Home() {
       // 1. ไปดึงข้อมูลจาก Key ที่ชื่อ "animal"
       const a = await AsyncStorage.getItem("animal");
       
-      // 2. เช็คว่าเจอมั้ย? (ถ้าเปิดแอปครั้งแรกจะไม่เจอ ค่าจะเป็น null)
+      // 2. เช็คว่าเจอมั้ย? (ถ้าเปิดแอปครั้งแรกจะไม่เจอ ค่าจะเป็น null   null  คือค่าว่างเปล่า)
       if (a === null) {
         setAnimalName("My me"); // ถ้าไม่เจอ ให้ตั้งค่าเริ่มต้น
       } else {
-        setAnimalName(a); // ถ้าเจอ ให้เอาค่าที่เจอมาใส่
+        setAnimalName(a); // ถ้าเจอ ให้เอาค่าที่เจอมาใส่ ค่าที่เจอคือตัวแปร a
       }
     } catch (e) {
       console.log(e);
